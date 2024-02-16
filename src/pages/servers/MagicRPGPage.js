@@ -1,13 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react'
 
-class MagicRPGPage extends Component {
-    render() {
-        return (
-            <div className="d-flex justify-content-center mt-5" >
-                <h1>Сторінка серверу - MagicRPG 1.12.2</h1>
-            </div>
-        );
-    }
+function MagicRPGPage() {
+    return (
+        <div className="d-flex justify-content-center mt-4" >
+            <h1>Сторінка серверу - MagicRPG 1.12.2</h1>
+        </div>
+    )
 }
 
-export default MagicRPGPage;
+export default MagicRPGPage
