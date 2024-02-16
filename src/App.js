@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
-import HomePage from './pages/HomePage';
 import AboutUsPage from './pages/AboutUsPage';
 import InfoPage from './pages/InfoPage';
+import RegistrationPage from './pages/RegistrationPage';
 
 import VanillaPage from './pages/servers/VanillaPage';
 import HiTechPage from './pages/servers/HiTechPage';
@@ -21,9 +21,9 @@ function App() {
       <div>
         <Header />
         <Routes>
-          <Route path="/" element={<HomePage />} /> 
           <Route path="/about" element={<AboutUsPage />} /> 
           <Route path="/info_guid" element={<InfoPage />} /> 
+          <Route path="/registrationpage" element={<RegistrationPage />} />
 
           <Route path="/VanillaPage" element={<VanillaPage />} />
           <Route path="/HiTechPage" element={<HiTechPage />} />
