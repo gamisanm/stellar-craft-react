@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import HomePage from './pages/HomePage'
 import Header from './components/Header';
 import AboutUsPage from './pages/AboutUsPage';
 import InfoPage from './pages/InfoPage';
@@ -16,13 +17,15 @@ import UltraTechPage from './pages/servers/UltraTechPage';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
-  return (
+  return (  
     <Router>
       <div>
         <Header />
         <Routes>
+        <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutUsPage />} /> 
           <Route path="/info_guid" element={<InfoPage />} /> 
+          
           <Route path="/registrationpage" element={<RegistrationPage />} />
 
           <Route path="/VanillaPage" element={<VanillaPage />} />

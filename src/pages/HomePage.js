@@ -1,11 +1,11 @@
 import React from 'react';
 
-function InfoPage() {
+function HomePage() {
   return (
     <div className="d-flex justify-content-center mt-5" >
-      <h1>Це сторінка з інфою та гайдами</h1>
+      <h1>Головна сторінка</h1>
     </div>  
   );
 }
 
-export default InfoPage;
+export default HomePage;

@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { Button, Container, Dropdown, Nav, Navbar, DropdownButton, Modal } from 'react-bootstrap';
 import logo from './logo.jpg';
-import { Link, Route, Routes } from 'react-router-dom';
-import RegistrationPage from '../pages/RegistrationPage';
+import { Link, } from 'react-router-dom';
 
 const Header = () => {
     const [showModal, setShowModal] = useState(false);
