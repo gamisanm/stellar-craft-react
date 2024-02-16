@@ -6,7 +6,7 @@ const RegistrationPage = () => {
         <Container>
             <Row className="justify-content-center">
                 <Col md={6}>
-                    <h1 className="text-center mb-4 mt-5">Реєстрація</h1>
+                    <h1 className="text-center mb-4 mt-3">Реєстрація</h1>
                     <form>
                         <div className="mb-3">
                             <label htmlFor="nick" className="form-label">Твій нік</label>

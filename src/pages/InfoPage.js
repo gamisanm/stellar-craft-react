@@ -1,11 +1,17 @@
+// InfoPage.js
 import React from 'react';
+import AuthorizationBlock from '../components/AuthorizationBlock';
 
-function InfoPage() {
-  return (
-    <div className="d-flex justify-content-center mt-5" >
-      <h1>Це сторінка з інфою та гайдами</h1>
-    </div>  
-  );
-}
+const InfoPage = ({ handleRegisterClick }) => {
+    return (
+      <div style={{ textAlign: 'center' }}>
+            <h1 className="mt-3">Різна інформація</h1>
+            {/* Include AuthorizationBlock component here */}
+            <div style={{ width: '1100px', margin: '20px auto', display: 'flex', justifyContent: 'flex-end' }}>
+                <AuthorizationBlock handleRegisterClick={handleRegisterClick} />
+            </div>
+        </div>
+    );
+};
 
 export default InfoPage;
