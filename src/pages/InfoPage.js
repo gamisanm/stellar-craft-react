@@ -1,6 +1,6 @@
 // InfoPage.js
 import React from 'react';
-import AuthorizationBlock from '../components/AuthorizationBlock';
+import AuthorizationBlock from '../components/AuthorizationBlock'; 
 
 const InfoPage = ({ handleRegisterClick }) => {
     return (

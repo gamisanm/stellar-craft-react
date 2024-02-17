@@ -18,7 +18,7 @@ const Header = () => {
 
     return (
         <>
-            <div style={{ width: '1100px', margin: '0 auto' }}>
+            <div style={{ margin: '0 auto' }}>
                 <Navbar collapseOnSelect expand="md" bg="dark" variant="dark">
                     <Container>
                         <Navbar.Brand as={Link} to="/">
