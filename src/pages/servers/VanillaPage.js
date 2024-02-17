@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, Carousel, Modal, Accordion } from 'react-bootstrap';
+import { Button, Carousel, Modal, Accordion, ListGroup } from 'react-bootstrap';
 
 import vanilla_img from '../../assets/vanilla_img.jpg';
 import vanilla_img1 from '../../assets/vanilla_img1.jpg';
@@ -13,17 +13,20 @@ import yungs1_img from '../../assets//mod_img/yungs1.png';
 
 function VanillaPage() {
   const [showModal, setShowModal] = useState(false);
+  const [showSecondModal, setShowSecondModal] = useState(false);
 
   const handleCloseModal = () => setShowModal(false);
   const handleShowModal = () => setShowModal(true);
 
+  // Functions to handle second modal
+  const handleCloseSecondModal = () => setShowSecondModal(false);
+  const handleShowSecondModal = () => setShowSecondModal(true);
+
   return (
     <>
-
       <div className="d-flex justify-content-center mt-4 mb-3">
         <h1>Сторінка серверу - Vanilla+ 1.16.5</h1>
       </div>
-
       <div style={{ maxWidth: '800px', margin: '0 auto' }}>
         <div className="d-flex justify-content-center mt-1 mb-3">
           <h3>Галерея серверу</h3>
@@ -68,9 +71,12 @@ function VanillaPage() {
             />
           </Carousel.Item>
         </Carousel>
+
         <div className="d-flex justify-content-center mt-3">
-          <Button variant="primary" onClick={handleShowModal}>Список модів</Button>
+          <Button variant="primary" onClick={handleShowModal} style={{ marginRight: '30px' }}>Список модів</Button>
+          <Button variant="primary" onClick={handleShowSecondModal}>Команди серверу</Button>
         </div>
+
         <Modal show={showModal} onHide={handleCloseModal} size="lg">
           <Modal.Header closeButton>
             <Modal.Title>Список модів</Modal.Title>
@@ -200,6 +206,39 @@ function VanillaPage() {
               Закрити
             </Button>
           </Modal.Footer>
+        </Modal>
+
+        {/* Second Modal */}
+        <Modal show={showSecondModal} onHide={handleCloseSecondModal} size="lg">
+          <Modal.Header closeButton>
+            <Modal.Title>Команди серверу</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <ListGroup as="ul">
+              <ListGroup.Item as="li" active>
+                Приват регіону
+              </ListGroup.Item>
+              <ListGroup.Item as="li">Dapibus ac facilisis in</ListGroup.Item>
+              <ListGroup.Item as="li">Morbi leo risus</ListGroup.Item>
+              <ListGroup.Item as="li">Porta ac consectetur ac</ListGroup.Item>
+              <ListGroup.Item as="li" className="mt-2" active>
+                Кіти
+              </ListGroup.Item>
+              <ListGroup.Item as="li">Dapibus ac facilisis in</ListGroup.Item>
+              <ListGroup.Item as="li">Morbi leo risus</ListGroup.Item>
+              <ListGroup.Item as="li">Porta ac consectetur ac</ListGroup.Item>
+              <ListGroup.Item as="li" className="mt-2" active>
+                Корисні команди
+              </ListGroup.Item>
+              <ListGroup.Item as="li">Dapibus ac facilisis in</ListGroup.Item>
+              <ListGroup.Item as="li">Morbi leo risus</ListGroup.Item>
+              <ListGroup.Item as="li">Porta ac consectetur ac</ListGroup.Item>
+              <Button variant="secondary" onClick={handleCloseSecondModal} className="mt-3 ">
+                Закрити
+              </Button>
+            </ListGroup>
+
+          </Modal.Body>
         </Modal>
       </div>
     </>

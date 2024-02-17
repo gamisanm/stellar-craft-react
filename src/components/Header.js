@@ -42,6 +42,7 @@ const Header = () => {
                                 <Nav.Link as={Link} to="/info_guid">Корисна інформація</Nav.Link>
                             </Nav>
                             <Button variant="primary" size="lg" onClick={handleShowModal}>ПОЧАТИ ГРАТИ!</Button>
+                            
                         </Navbar.Collapse>
                     </Container>
                 </Navbar>
